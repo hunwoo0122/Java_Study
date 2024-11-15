@@ -10,9 +10,12 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.jsoup/jsoup
-    implementation 'org.apache.poi:poi-ooxml:5.2.3'
     implementation 'org.jsoup:jsoup:1.18.1'
+    implementation 'mysql:mysql-connector-java:8.0.33' // 버전은 사용 중인 MySQL
+
+    implementation 'org.projectlombok:lombok:1.18.24'  // compile을 implementation으로 변경
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'  // annotationProcessor는 그대로 유지
+
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
